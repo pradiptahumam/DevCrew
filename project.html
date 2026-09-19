@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevCrew - Tim Kami</title>
+  <title>DevCrew - Proyek & Kontak</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,8 +20,10 @@
         <li><a href="index.html">Beranda</a></li>
         <li><a href="team.html" class="active">Tim Kami</a></li>
         <li><a href="projects.html">Proyek & Kontak</a></li>
+        <li><a href="team.html">Tim Kami</a></li>
+        <li><a href="projects.html" class="active">Proyek & Kontak</a></li>
       </ul>
-      <button id="theme-toggle">🌙</button>
+      <button id="theme-toggle"></button>
     </nav>
   </header>
 
@@ -61,9 +64,47 @@
           <a href="#">GitHub</a>
           <a href="#">LinkedIn</a>
         </div>
+  <!-- Portfolio Section -->
+  <section class="projects-section">
+    <h2>Portofolio Proyek</h2>
+    <div class="project-grid">
+
+      <div class="project-card">
+        <h3>Website DevCrew</h3>
+        <p>Proyek landing page 3 halaman untuk memperkenalkan tim dan portofolio menggunakan HTML, CSS, dan JS.</p>
+        <a href="#" class="btn-secondary">Lihat Repository</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Proyek Latihan Git</h3>
+        <p>Repositori latihan kolaborasi menggunakan GitHub branching dan Pull Requests.</p>
+        <a href="#" class="btn-secondary">Lihat Repository</a>
       </div>
 
     </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="contact-section">
+    <h2>Hubungi Kami</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Nama:</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Pesan:</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tuliskan pesan Anda..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Kirim Pesan</button>
+    </form>
   </section>
 
   <!-- Footer -->
@@ -73,4 +114,5 @@
 
   <script src="js/main.js"></script>
 </body>
+</html>
 </html>
