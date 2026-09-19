@@ -1,0 +1,702 @@
+/* DEV CREW - RETRO BLACK & WHITE */
+ 
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  background: #f5f5f5;
+  color: #111;
+  line-height: 1.6;
+}
+
+/*HEADER*/
+
+header {
+  background: #111;
+  color: #fff;
+  padding: 20px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 5px solid #fff;
+}
+
+.logo h1 {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.logo span {
+  background: #fff;
+  color: #111;
+  padding: 3px 8px;
+  border: 3px solid #fff;
+}
+
+/* Navigasi */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 3px solid transparent;
+  transition: 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #fff;
+  color: #111;
+  border: 3px solid #fff;
+  box-shadow: 4px 4px 0 #777;
+}
+
+/* Tombol Dark/Light */
+#theme-toggle {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  border: 3px solid #fff;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #555;
+}
+
+#theme-toggle:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #555;
+}
+
+/*HERO*/
+
+.hero {
+  min-height: 75vh;
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #f5f5f5,
+      #f5f5f5 4px,
+      #e5e5e5 4px,
+      #e5e5e5 5px
+    );
+  border-bottom: 5px solid #111;
+}
+
+.hero-text {
+  max-width: 750px;
+  background: #fff;
+  padding: 45px;
+  border: 5px solid #111;
+  box-shadow: 12px 12px 0 #111;
+}
+
+.hero-text h2 {
+  font-size: clamp(38px, 6vw, 70px);
+  line-height: 1;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  letter-spacing: -4px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  max-width: 650px;
+}
+
+/* Tombol utama */
+.btn-primary {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 22px;
+  border: 4px solid #111;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 7px 7px 0 #888;
+  transition: 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: #111;
+  box-shadow: 3px 3px 0 #111;
+  transform: translate(4px, 4px);
+}
+
+/*ABOUT / SUMMARY*/
+
+.about-summary {
+  padding: 80px 7%;
+  background: #111;
+  color: #fff;
+}
+
+.about-summary > h2 {
+  font-size: 42px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: -2px;
+}
+
+
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  color: #111;
+  padding: 30px;
+  border: 5px solid #fff;
+  box-shadow: 8px 8px 0 #555;
+  transition: 0.2s ease;
+}
+
+.card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 13px 13px 0 #777;
+}
+
+.card h3 {
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #111;
+  padding-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/*FOOTER*/
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 25px;
+  border-top: 5px solid #fff;
+}
+
+footer p {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width: 800px) {
+
+  header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero-text {
+    padding: 30px;
+    box-shadow: 8px 8px 0 #111;
+  }
+
+  .hero-text h2 {
+    font-size: 42px;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .about-summary {
+    padding: 60px 5%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .logo h1 {
+    font-size: 27px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li a {
+    width: 100%;
+  }
+
+  .hero-text h2 {
+    font-size: 35px;
+  }
+
+  .hero-text p {
+    font-size: 15px;
+  }
+
+  .about-summary > h2 {
+    font-size: 30px;
+  }
+}
+
+/*TEAM SECTION*/
+
+.team-section {
+  min-height: 75vh;
+  padding: 80px 7%;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #f5f5f5,
+      #f5f5f5 4px,
+      #e5e5e5 4px,
+      #e5e5e5 5px
+    );
+  color: #111;
+  text-align: center;
+  border-bottom: 5px solid #111;
+}
+
+.team-section > h2 {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 10px 25px;
+  border: 5px solid #111;
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  box-shadow: 8px 8px 0 #777;
+  margin-bottom: 20px;
+}
+
+.team-section > p {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 55px;
+}
+
+/* Container */
+.team-container {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+/*TEAM CARD*/
+
+.team-card {
+  background: #fff;
+  border: 5px solid #111;
+  padding: 30px;
+  box-shadow: 10px 10px 0 #111;
+  transition: 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0 #555;
+}
+
+/* Foto Profil */
+.profile-img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 25px;
+
+  border: 5px solid #111;
+
+  /* Efek foto retro */
+  filter: grayscale(100%);
+}
+
+/* Nama */
+.team-card h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+/* Role */
+.team-card .role {
+  background: #111;
+  color: #fff;
+  display: inline-block;
+  padding: 6px 12px;
+  border: 3px solid #111;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/*SKILLS*/
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.badge {
+  background: #fff;
+  color: #111;
+  border: 3px solid #111;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 3px 3px 0 #777;
+}
+
+/*SOCIAL LINKS*/
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 15px;
+  border: 3px solid #111;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0 #777;
+  transition: 0.2s ease;
+}
+
+.social-links a:hover {
+  background: #fff;
+  color: #111;
+  box-shadow: 2px 2px 0 #111;
+  transform: translate(2px, 2px);
+}
+
+/*RESPONSIVE TEAM*/
+
+@media (max-width: 800px) {
+
+  .team-section {
+    padding: 60px 5%;
+  }
+
+  .team-section > h2 {
+    font-size: 32px;
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .team-section > h2 {
+    font-size: 26px;
+    padding: 8px 15px;
+  }
+
+  .team-section > p {
+    font-size: 14px;
+  }
+
+  .profile-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .team-card h3 {
+    font-size: 20px;
+  }
+
+  .social-links {
+    flex-direction: column;
+  }
+
+  .social-links a {
+    display: block;
+  }
+}
+/*PROJECTS SECTION*/
+
+.projects-section {
+  padding: 80px 7%;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      #f5f5f5,
+      #f5f5f5 4px,
+      #e5e5e5 4px,
+      #e5e5e5 5px
+    );
+  color: #111;
+  border-bottom: 5px solid #111;
+}
+
+.projects-section > h2 {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 10px 25px;
+  border: 5px solid #111;
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  box-shadow: 8px 8px 0 #777;
+  margin-bottom: 50px;
+}
+
+/* Grid Proyek */
+.project-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+/* Kartu Proyek */
+.project-card {
+  background: #fff;
+  padding: 35px;
+  border: 5px solid #111;
+  box-shadow: 10px 10px 0 #111;
+  transition: 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0 #555;
+}
+
+.project-card h3 {
+  font-size: 28px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 4px solid #111;
+}
+
+.project-card p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+/* Tombol Repository */
+.btn-secondary {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  padding: 11px 18px;
+  border: 4px solid #111;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 0 #777;
+  transition: 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #111;
+  color: #fff;
+  box-shadow: 2px 2px 0 #111;
+  transform: translate(3px, 3px);
+}
+
+/*CONTACT SECTION*/
+
+.contact-section {
+  padding: 80px 7%;
+  background: #111;
+  color: #fff;
+}
+
+.contact-section > h2 {
+  text-align: center;
+  font-size: 42px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  margin-bottom: 45px;
+}
+
+.contact-section > h2::before {
+  content: "// ";
+}
+
+/* Form */
+#contact-form {
+  max-width: 700px;
+  margin: auto;
+  background: #fff;
+  color: #111;
+  padding: 40px;
+  border: 5px solid #fff;
+  box-shadow: 12px 12px 0 #555;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+/* Input dan Textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  background: #f5f5f5;
+  color: #111;
+  border: 4px solid #111;
+  outline: none;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  font-weight: bold;
+  resize: vertical;
+}
+
+/* Saat input dipilih */
+.form-group input:focus,
+.form-group textarea:focus {
+  background: #fff;
+  box-shadow: 5px 5px 0 #777;
+}
+
+/* Placeholder */
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #666;
+  font-weight: normal;
+}
+
+/* Tombol Kirim */
+.contact-section .btn-primary {
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+}
+
+/*RESPONSIVE PROJECTS*/
+
+@media (max-width: 800px) {
+
+  .projects-section,
+  .contact-section {
+    padding: 60px 5%;
+  }
+
+  .projects-section > h2,
+  .contact-section > h2 {
+    font-size: 32px;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #contact-form {
+    padding: 30px;
+    box-shadow: 8px 8px 0 #555;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .projects-section > h2,
+  .contact-section > h2 {
+    font-size: 26px;
+    padding: 8px 15px;
+  }
+
+  .project-card {
+    padding: 25px;
+  }
+
+  .project-card h3 {
+    font-size: 22px;
+  }
+
+  .project-card p {
+    font-size: 14px;
+  }
+
+  #contact-form {
+    padding: 20px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 14px;
+  }
+}
